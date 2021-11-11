@@ -1,0 +1,32 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+
+//Java implementation of the approach
+public class MirrorInverse {
+// Function that returns true if
+// the array is mirror-inverse
+static boolean isMirrorInverse(int arr[])
+{
+for (int i = 0; i<arr.length; i++) {
+// If condition fails for any element
+if (arr[arr[i]] != i)
+return false;
+}
+// Given array is mirror-inverse
+return true;
+}
+ 
+public static void main(String[] args)
+{
+int arr[] = { 1, 2, 3, 0 };
+if (isMirrorInverse(arr))
+System.out.println("Yes");
+else
+System.out.println("No");
+}
+}
